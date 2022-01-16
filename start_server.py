@@ -19,8 +19,10 @@ if __name__ == "__main__":
         "--host", dest="host", action="store", default="0.0.0.0", help="The host (default: 127.0.0.1)"
     )
     parser.add_argument("--port", dest="port", action="store", default=8080, help="The port (default: 8080)")
-    parser.add_argument("--http", action=argparse.BooleanOptionalAction, help="Start HTTP server instead of HTTPS")
-    parser.add_argument("--debug", action=argparse.BooleanOptionalAction, help="Debug mode")
+    parser.add_argument('--http', dest='http', action='store_true', help="Start HTTP server instead of HTTPS")
+    parser.set_defaults(feature=False)
+    parser.add_argument("--debug", dest='debug', action='store_true', help="Debug mode")
+    parser.set_defaults(debug=False)
 
     args = parser.parse_args()
     Server(host=args.host, port=args.port, http=args.http, debug=args.debug).start()

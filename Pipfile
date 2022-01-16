@@ -9,6 +9,7 @@ jinja2 = "*"
 aiohttp-jinja2 = "*"
 soco = "*"
 aiofiles = "*"
+typing-extensions = "*"
 
 [dev-packages]
 

@@ -1,5 +1,7 @@
 # Repository specific
 *.jpeg
+domain_srv.crt
+domain_srv.key
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
