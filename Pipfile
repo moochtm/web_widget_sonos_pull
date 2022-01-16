@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiohttp = "==3.8.1"
+jinja2 = "*"
+aiohttp-jinja2 = "*"
+soco = "*"
+aiofiles = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
