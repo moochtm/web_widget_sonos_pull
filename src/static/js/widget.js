@@ -11,7 +11,7 @@ document.$WEB_SOCKET.addEventListener('open', () => {
 
  document.$WEB_SOCKET.addEventListener('message', (event) => {
     console.log(event);
-    counter = 0;
+    timeout_counter = 0;
     const NEW_DATA = JSON.parse(event.data);
     updateHTML("#widget", NEW_DATA.html);
 });
@@ -22,6 +22,7 @@ function requestRefresh() {
         return;
     }
     timeout_counter++;
+    console.log(timeout_counter)
     if (timeout_counter > 2) {
         console.log("Server not responding!");
         updateHTML("#widget", "Server not responding!");
