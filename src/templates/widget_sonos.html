@@ -1,0 +1,16 @@
+<!--
+context = {
+    "title": title,
+    "artist": artist,
+    "album": album,
+    "img_src": img_src,
+}
+-->
+
+{% if transport == "PLAYING" %}
+<div><img class="artwork" src="{{img_src}}"></div>
+<div class="title">{{title}}</div>
+<div class="artist">{{artist}} ● {{album}}</div>
+{% else %}
+<div class="artist">Nothing playing right now...</div>
+{% endif %}
