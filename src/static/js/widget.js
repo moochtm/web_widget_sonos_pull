@@ -21,9 +21,8 @@ function requestRefresh() {
         onNotConnected();
         return;
     }
-    counter++;
-    console.log(counter);
-    if (counter > 1) {
+    timeout_counter++;
+    if (timeout_counter > 2) {
         console.log("Server not responding!");
         updateHTML("#widget", "Server not responding!");
     }
@@ -47,5 +46,5 @@ function onNotConnected(){
     console.log("No connection established!");
 }
 
-var counter = 0;
+var timeout_counter = 0;
 setInterval(requestRefresh, 5000);
